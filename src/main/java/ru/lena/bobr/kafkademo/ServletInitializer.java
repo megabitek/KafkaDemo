@@ -1,4 +1,4 @@
-package ru.lena.bobr.kafrademo;
+package ru.lena.bobr.kafkademo;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(KafraDemoApplication.class);
+        return application.sources(KafkaDemoApplication.class);
     }
 
 }
