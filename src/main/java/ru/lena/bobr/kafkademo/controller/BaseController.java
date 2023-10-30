@@ -24,6 +24,7 @@ public class BaseController {
     @PostMapping
     public void sendOrder(Long msgId, UserDto msg){
     ///
+
         msg.setAddress(new Address( "RUS", "Saratov", "Linina", 1L, 3L));
 CompletableFuture<SendResult<Long, UserDto>> future = kafkaTemplate.send("msg", msgId, msg);
 future.thenAccept(System.out::println);

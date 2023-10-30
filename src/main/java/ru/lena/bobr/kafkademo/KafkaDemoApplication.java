@@ -19,6 +19,7 @@ public class KafkaDemoApplication {
     }*/
 
 
+
     @KafkaListener(topics="msg")
     public void orderListener(ConsumerRecord<Long, UserDto> record){
         System.out.println(record.partition());
